@@ -1,5 +1,7 @@
 package com.pao.laboratory03.enums;
 
+import com.pao.laboratory03.Ex2EnumsSolution;
+
 /**
  * Exercițiul 2 — Enum-uri
  *
@@ -48,9 +50,66 @@ package com.pao.laboratory03.enums;
  * CRITICAL: name=CRITICAL, ordinal=3
  */
 public class Main {
+
+    private enum Priority {
+        LOW(1, "green") {
+            @Override public String getEmoji() { return "🟢"; }
+        },
+        MEDIUM(2, "yellow"){
+            @Override public String getEmoji() { return "\uD83D\uDFE1"; }
+        },
+        HIGH(3, "orange"){
+            @Override public String getEmoji() { return "\uD83D\uDFE0"; }
+        },
+        CRITICAL(4, "red"){
+            @Override public String getEmoji() { return "\uD83D\uDD34"; }
+        };
+
+        private final int level;
+        private final String color;
+
+        Priority(int level, String color){
+            this.level = level;
+            this.color = color;
+        }
+
+        public int getLevel(){return level;}
+        public String getColor(){return color;}
+        public abstract String getEmoji();
+    }
+
     public static void main(String[] args) {
-        // TODO: implementează pașii de mai sus
-        // Hint: creează mai întâi fișierul Priority.java în acest pachet
+        // A
+        //"emoji name (level=X, color=Y)"
+        for (Priority p : Priority.values()){
+            System.out.println(p.getEmoji() + " " +p.name() +
+                    " (level=" + p.getLevel() + ", color=" +
+                    p.getColor() + ")\n");
+        }
+
+        //B
+        Priority test = Priority.MEDIUM;
+        switch(test){
+            case LOW: System.out.println("OK"); break;
+            case MEDIUM: System.out.println("Asa si asa"); break;
+            case HIGH: System.out.println("Grav"); break;
+            case CRITICAL: System.out.println("FFFF grav!!!!"); break;
+        }
+
+        //c
+        Priority fromString = Priority.valueOf("MEDIUM");
+        System.out.println("Priority.valueOf(\"MEDIUM\") = " + fromString);
+
+        //d
+        System.out.println("MEDIUM == MEDIUM? " + (Priority.MEDIUM == fromString));
+
+        //e
+
+        //LOW: name=LOW, ordinal=0
+        for (Priority p : Priority.values()){
+            System.out.println(p.name() + ": name=" + p.name() +
+                    ", ordinal=" + p.ordinal());
+        }
     }
 }
 
