@@ -11,6 +11,7 @@ public abstract class Angajat {
     }
 
     public String getName() { return name; }
+
     public double getSalariuBaza() { return salariuBaza; }
 
     /** Formula diferă per subclasă. */
