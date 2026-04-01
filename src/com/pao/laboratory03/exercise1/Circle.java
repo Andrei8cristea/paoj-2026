@@ -1,5 +1,7 @@
 package com.pao.laboratory03.exercise1;
 
+import com.pao.laboratory03.exercise1.Shape;
+
 /**
  * TODO: Implementează Circle extends Shape.
  * - Atribut: private double radius
@@ -9,20 +11,20 @@ package com.pao.laboratory03.exercise1;
  */
 public class Circle extends Shape {
 
-    // TODO: private double radius
+    private double radius;
 
     public Circle(double radius) {
         super("Circle");
-        // TODO: this.radius = radius
+        this.radius = radius;
     }
 
     @Override
     public double area() {
-        return 0; // TODO: Math.PI * radius * radius
+        return Math.PI * radius * radius;
     }
 
     @Override
     public double perimeter() {
-        return 0; // TODO: 2 * Math.PI * radius
+        return 2 * Math.PI * radius;
     }
 }

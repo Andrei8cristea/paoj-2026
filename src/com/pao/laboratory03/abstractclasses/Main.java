@@ -1,4 +1,4 @@
-package com.pao.laboratory03.abstractclasses;
+package com.pao.laboratory02.abstractclasses;
 
 /** Demo: clase abstracte, moștenire, polimorfism, upcasting. */
 public class Main {

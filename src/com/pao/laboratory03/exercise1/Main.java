@@ -1,5 +1,7 @@
 package com.pao.laboratory03.exercise1;
 
+import com.pao.laboratory03.exercise1.Shape;
+
 /** Testează Circle și Rectangle. NU modifica. Rulează după ce completezi TODO-urile. */
 public class Main {
     public static void main(String[] args) {

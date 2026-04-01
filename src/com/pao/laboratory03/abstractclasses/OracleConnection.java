@@ -1,4 +1,4 @@
-package com.pao.laboratory03.abstractclasses;
+package com.pao.laboratory02.abstractclasses;
 
 /** Subclasă concretă — implementare Oracle. */
 public class OracleConnection extends DBConnection {
