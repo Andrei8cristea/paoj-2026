@@ -1,80 +1,51 @@
 package com.pao.laboratory07.exercise2;
 
 import java.util.*;
+//import com.pao.laboratory07.exercise1.OrderState;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-
-        int n = Integer.parseInt(in.nextLine());
-        List<ActiuneComanda> comenzi = new ArrayList<>();
-
-        for (int i = 0; i < n; i++) {
-            String[] t = in.nextLine().split(" ");
-
-            switch (t[0]) {
-                case "STANDARD" -> comenzi.add(
-                        new ComandaStandard(t[1], t[2], Double.parseDouble(t[3]))
-                );
-                case "PRECOMANDA" -> comenzi.add(
-                        new Precomanda(t[1], t[2], Double.parseDouble(t[3]), t[4])
-                );
-                case "ABONAMENT" -> comenzi.add(
-                        new ComandaAbonament(t[1], t[2], Double.parseDouble(t[3]), Integer.parseInt(t[4]))
-                );
-            }
-        }
-
-        // Detectăm partea testată (A/B/C)
-        String testPart = System.getProperty("testPart");
-
-        if ("A".equals(testPart)) {
-            for (ActiuneComanda c : comenzi) {
-                ((Comanda) c).procesare();
-            }
-            return;
-        }
-
-        if ("B".equals(testPart)) {
-            for (ActiuneComanda c : comenzi) {
-                if (c.esteSpeciala()) {
-                    c.afiseaza();
-                }
-            }
-            return;
-        }
-
-        // PARTEA C
-        comenzi.sort((a, b) -> Double.compare(((Comanda)b).valoare, ((Comanda)a).valoare));
-
-        for (ActiuneComanda c : comenzi) {
-            c.afiseaza();
-        }
-
-        System.out.println();
-
-        ActiuneComanda max = comenzi.get(0);
-        System.out.print("Comanda cu valoarea maxima: ");
-        max.afiseaza();
-
-        System.out.println();
-
-        System.out.println("Sume și număr comenzi pe tip:");
-
-        Map<String, Double> sume = new LinkedHashMap<>();
-        Map<String, Integer> nr = new LinkedHashMap<>();
-
-        for (ActiuneComanda c : comenzi) {
-            String tip = c.tipComanda();
-            double val = ((Comanda)c).valoare;
-
-            sume.put(tip, sume.getOrDefault(tip, 0.0) + val);
-            nr.put(tip, nr.getOrDefault(tip, 0) + 1);
-        }
-
-        for (String tip : List.of("STANDARD", "PRECOMANDA", "ABONAMENT")) {
-            System.out.printf("%s: suma = %.2f lei, număr = %d%n",
-                    tip, sume.getOrDefault(tip, 0.0), nr.getOrDefault(tip, 0));
-        }
+//        Scanner sc = new Scanner(System.in);
+//        int n = Integer.parseInt(sc.nextLine().trim());
+//        List<Comanda> comenzi = new ArrayList<>();
+//        int nrStandard = 0, nrDiscounted = 0, nrGift = 0;
+//        double sumaStandard = 0, sumaDiscounted = 0;
+//        for (int i = 0; i < n; i++) {
+//            String line = sc.nextLine().trim();
+//            String[] tokens = line.split(" ");
+//            if (tokens[0].equals("STANDARD")) {
+//                String nume = tokens[1];
+//                double pret = Double.parseDouble(tokens[2]);
+//                Comanda c = new ComandaStandard(nume, pret);
+//                comenzi.add(c);
+//                nrStandard++;
+//                sumaStandard += c.pretFinal();
+//            } else if (tokens[0].equals("DISCOUNTED")) {
+//                String nume = tokens[1];
+//                double pret = Double.parseDouble(tokens[2]);
+//                int discount = Integer.parseInt(tokens[3]);
+//                Comanda c = new ComandaRedusa(nume, pret, discount);
+//                comenzi.add(c);
+//                nrDiscounted++;
+//                sumaDiscounted += c.pretFinal();
+//            } else if (tokens[0].equals("GIFT")) {
+//                String nume = tokens[1];
+//                Comanda c = new ComandaGratuita(nume);
+//                comenzi.add(c);
+//                nrGift++;
+//            }
+//        }
+//        for (Comanda c : comenzi) {
+//            System.out.println(c.descriere());
+//        }
+//        System.out.println();
+//        System.out.println("Statistici:");
+//        if (nrStandard > 0)
+//            System.out.printf("STANDARD: suma = %.2f lei, numar = %d\n", sumaStandard, nrStandard);
+//        if (nrDiscounted > 0)
+//            System.out.printf("DISCOUNTED: suma = %.2f lei, numar = %d\n", sumaDiscounted, nrDiscounted);
+//        if (nrGift > 0)
+//            System.out.printf("GIFT: suma = 0.00 lei, numar = %d\n", nrGift);
+//        System.out.printf("Total platit: %.2f lei\n", sumaStandard + sumaDiscounted);
     }
 }

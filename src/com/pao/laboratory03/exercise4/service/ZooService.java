@@ -1,6 +1,6 @@
-package com.pao.laboratory02.exercise4.service;
+package com.pao.laboratory03.exercise4.service;
 
-import com.pao.laboratory02.exercise4.model.Animal;
+import com.pao.laboratory03.exercise4.model.Animal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,12 +65,11 @@ public class ZooService {
      *   2. System.out.println("Adăugat: " + a);
      */
     public void addAnimal(Animal a) {
-        animals.add(a);
-        System.out.println("Adaugat: "  + a);
+        // TODO: implementează aici
     }
 
     /**
-     * Afișează toate animalele cu describe().
+     * TODO: Afișează toate animalele cu describe().
      *
      * Dacă lista e goală:
      *   System.out.println("Grădina zoologică este goală.");
@@ -79,16 +78,7 @@ public class ZooService {
      *   System.out.println("  " + (i+1) + ". " + animals.get(i).describe());
      */
     public void listAll() {
-        if (animals.isEmpty()){
-            System.out.println("Gradina este goala!");
-        }
-        else{
-            for(int i = 0; i < animals.size(); i++){
-                System.out.println((1+i) + ". " +
-                        animals.get(i).describe());
-
-            }
-        }
+        // TODO: implementează aici
     }
 
     /**
@@ -105,21 +95,11 @@ public class ZooService {
      *       La final, verifică if (!found).
      */
     public void listByType(String type) {
-        boolean found = false;
-        for(Animal animal : animals){
-            if (animal.getClass().getSimpleName().equals(type)){
-                System.out.println(" - " + animal.describe());
-                found = true;
-            }
-        }
-
-        if(!found){
-            System.out.println("Nu exista animale de tipul: " + type);
-        }
+        // TODO: implementează aici
     }
 
     /**
-     *Găsește și afișează cel mai bătrân animal.
+     * TODO: Găsește și afișează cel mai bătrân animal.
      *
      * Dacă lista e goală:
      *   System.out.println("Grădina zoologică este goală.");
@@ -131,19 +111,7 @@ public class ZooService {
      *   3. System.out.println("Cel mai bătrân animal: " + oldest.describe());
      */
     public void findOldest() {
-        if (animals.isEmpty()) {
-            System.out.println("Grădina zoologică este goală.");
-            return;
-        }
-
-        Animal oldest = animals.get(0);
-        for (int i = 1; i < animals.size(); i++) {
-            if (animals.get(i).getAge() > oldest.getAge()) {
-                oldest = animals.get(i);
-            }
-        }
-
-        System.out.println("Cel mai bătrân animal: " + oldest.describe());
+        // TODO: implementează aici
     }
 }
 

@@ -1,14 +1,14 @@
-# Laboratory 02 — Moștenire, Clase abstracte, Interfețe, Colecții
+﻿# Laboratory 03 — Moștenire, Clase abstracte, Interfețe, Colecții
 
 ## Demo-uri (citește și rulează)
 
 | Pachet | Ce demonstrează |
 |--------|-----------------|
-| [abstractclasses/](src/com/pao/laboratory02/abstractclasses) | Clasă abstractă, moștenire, polimorfism, upcasting |
-| [equalshashcode/](src/com/pao/laboratory02/equalshashcode) | `==` vs `.equals()`, `hashCode`, comportament `HashSet` |
-| [immutable/](src/com/pao/laboratory02/immutable) | Clasă imutabilă: `final class`, `final` fields, fără setteri |
-| [strings/](src/com/pao/laboratory02/strings) | `String` vs `StringBuilder` vs `StringBuffer` + benchmark |
-| [collections/](src/com/pao/laboratory02/collections) | `ArrayList`, `HashSet`, `TreeSet` — operații și parcurgere |
+| [abstractclasses/](src/com/pao/laboratory03/abstractclasses) | Clasă abstractă, moștenire, polimorfism, upcasting |
+| [equalshashcode/](src/com/pao/laboratory03/equalshashcode) | `==` vs `.equals()`, `hashCode`, comportament `HashSet` |
+| [immutable/](src/com/pao/laboratory03/immutable) | Clasă imutabilă: `final class`, `final` fields, fără setteri |
+| [strings/](src/com/pao/laboratory03/strings) | `String` vs `StringBuilder` vs `StringBuffer` + benchmark |
+| [collections/](src/com/pao/laboratory03/collections) | `ArrayList`, `HashSet`, `TreeSet` — operații și parcurgere |
 
 ---
 
@@ -16,10 +16,10 @@
 
 | # | Exercițiu | Timp estimat | Fișiere de completat |
 |---|-----------|--------------|----------------------|
-| 1 | Forme geometrice | ~20 min | [Circle.java](src/com/pao/laboratory02/exercise1/Circle.java), [Rectangle.java](src/com/pao/laboratory02/exercise1/Rectangle.java) |
-| 2 | equals/hashCode Student | ~15 min | [Student.java](src/com/pao/laboratory02/exercise2/Student.java) |
-| 3 | Angajați + ArrayList | ~25 min | [Programator.java](src/com/pao/laboratory02/exercise3/model/Programator.java), [Manager.java](src/com/pao/laboratory02/exercise3/model/Manager.java), [AngajatService.java](src/com/pao/laboratory02/exercise3/service/AngajatService.java) |
-| 4 | Zoo (bonus) | ~30 min | [Dog.java](src/com/pao/laboratory02/exercise4/model/Dog.java), [Cat.java](src/com/pao/laboratory02/exercise4/model/Cat.java), [Parrot.java](src/com/pao/laboratory02/exercise4/model/Parrot.java), [ZooService.java](src/com/pao/laboratory02/exercise4/service/ZooService.java) |
+| 1 | Forme geometrice | ~20 min | [Circle.java](src/com/pao/laboratory03/exercise1/Circle.java), [Rectangle.java](src/com/pao/laboratory03/exercise1/Rectangle.java) |
+| 2 | equals/hashCode Student | ~15 min | [Student.java](src/com/pao/laboratory03/exercise2/Student.java) |
+| 3 | Angajați + ArrayList | ~25 min | [Programator.java](src/com/pao/laboratory03/exercise3/model/Programator.java), [Manager.java](src/com/pao/laboratory03/exercise3/model/Manager.java), [AngajatService.java](src/com/pao/laboratory03/exercise3/service/AngajatService.java) |
+| 4 | Zoo (bonus) | ~30 min | [Dog.java](src/com/pao/laboratory03/exercise4/model/Dog.java), [Cat.java](src/com/pao/laboratory03/exercise4/model/Cat.java), [Parrot.java](src/com/pao/laboratory03/exercise4/model/Parrot.java), [ZooService.java](src/com/pao/laboratory03/exercise4/service/ZooService.java) |
 
 ---
 
@@ -27,9 +27,9 @@
 
 Implementează `Circle` și `Rectangle` care extind `Shape`.
 
-**Fișiere:** [Circle.java](src/com/pao/laboratory02/exercise1/Circle.java), [Rectangle.java](src/com/pao/laboratory02/exercise1/Rectangle.java)  
-**Model:** [Shape.java](src/com/pao/laboratory02/exercise1/Shape.java) (dat)  
-**Test:** [Main.java](src/com/pao/laboratory02/exercise1/Main.java) (nu modifica)
+**Fișiere:** [Circle.java](src/com/pao/laboratory03/exercise1/Circle.java), [Rectangle.java](src/com/pao/laboratory03/exercise1/Rectangle.java)  
+**Model:** [Shape.java](src/com/pao/laboratory03/exercise1/Shape.java) (dat)  
+**Test:** [Main.java](src/com/pao/laboratory03/exercise1/Main.java) (nu modifica)
 
 <details>
 <summary><b>Output așteptat</b></summary>
@@ -59,9 +59,9 @@ Total arii: 140.10
 
 Adaugă `equals(Object o)` și `hashCode()` în `Student` — doi studenți sunt egali dacă au **același id**.
 
-**Fișier:** [Student.java](src/com/pao/laboratory02/exercise2/Student.java)  
-**Model:** [Book.java](src/com/pao/laboratory02/equalshashcode/Book.java) (dat)  
-**Test:** [Main.java](src/com/pao/laboratory02/exercise2/Main.java) (nu modifica)
+**Fișier:** [Student.java](src/com/pao/laboratory03/exercise2/Student.java)  
+**Model:** [Book.java](src/com/pao/laboratory03/equalshashcode/Book.java) (dat)  
+**Test:** [Main.java](src/com/pao/laboratory03/exercise2/Main.java) (nu modifica)
 
 <details>
 <summary><b>Output așteptat</b></summary>
@@ -81,9 +81,9 @@ Test 3 (HashSet):   PASSED ✓
 
 Implementează `Programator` și `Manager` (extind `Angajat`) + completează `AngajatService`.
 
-**Fișiere:** [Programator.java](src/com/pao/laboratory02/exercise3/model/Programator.java), [Manager.java](src/com/pao/laboratory02/exercise3/model/Manager.java), [AngajatService.java](src/com/pao/laboratory02/exercise3/service/AngajatService.java)  
-**Model:** [Angajat.java](src/com/pao/laboratory02/exercise3/model/Angajat.java) (dat)  
-**Test:** [Main.java](src/com/pao/laboratory02/exercise3/Main.java) (nu modifica)
+**Fișiere:** [Programator.java](src/com/pao/laboratory03/exercise3/model/Programator.java), [Manager.java](src/com/pao/laboratory03/exercise3/model/Manager.java), [AngajatService.java](src/com/pao/laboratory03/exercise3/service/AngajatService.java)  
+**Model:** [Angajat.java](src/com/pao/laboratory03/exercise3/model/Angajat.java) (dat)  
+**Test:** [Main.java](src/com/pao/laboratory03/exercise3/Main.java) (nu modifica)
 
 **Formule:**
 - `Programator.salariuTotal()` = `getSalariuBaza() * 1.5`
@@ -122,9 +122,9 @@ Test 3 (Total):       PASSED ✓
 
 Implementează `Dog`, `Cat`, `Parrot` (extind `Animal`) + completează `ZooService` (Singleton cu 4 metode).
 
-**Fișiere:** [Dog.java](src/com/pao/laboratory02/exercise4/model/Dog.java), [Cat.java](src/com/pao/laboratory02/exercise4/model/Cat.java), [Parrot.java](src/com/pao/laboratory02/exercise4/model/Parrot.java), [ZooService.java](src/com/pao/laboratory02/exercise4/service/ZooService.java)  
-**Model:** [Animal.java](src/com/pao/laboratory02/exercise4/model/Animal.java), [Describable.java](src/com/pao/laboratory02/exercise4/model/Describable.java) (date)  
-**Test:** [Main.java](src/com/pao/laboratory02/exercise4/Main.java) — meniu interactiv (nu modifica)
+**Fișiere:** [Dog.java](src/com/pao/laboratory03/exercise4/model/Dog.java), [Cat.java](src/com/pao/laboratory03/exercise4/model/Cat.java), [Parrot.java](src/com/pao/laboratory03/exercise4/model/Parrot.java), [ZooService.java](src/com/pao/laboratory03/exercise4/service/ZooService.java)  
+**Model:** [Animal.java](src/com/pao/laboratory03/exercise4/model/Animal.java), [Describable.java](src/com/pao/laboratory03/exercise4/model/Describable.java) (date)  
+**Test:** [Main.java](src/com/pao/laboratory03/exercise4/Main.java) — meniu interactiv (nu modifica)
 
 <details>
 <summary><b>Exemplu interacțiune</b></summary>
@@ -164,7 +164,7 @@ Alege opțiunea: 1
 
 ---
 
-## Ce urmează la Laboratory 03?
+## Ce urmează la Laboratory 04?
 - `Map` (`HashMap`, `TreeMap`)
 - `Comparable` cu `Collections.sort`
 - Enum-uri
@@ -188,10 +188,10 @@ public Circle(double radius) {
 ```
 
 Alte exemple din laborator:
-- [MySqlConnection.java](src/com/pao/laboratory02/abstractclasses/MySqlConnection.java) — `super(url)` pentru [DBConnection](src/com/pao/laboratory02/abstractclasses/DBConnection.java)
-- [Programator.java](src/com/pao/laboratory02/exercise3/model/Programator.java) — `super(name, salariuBaza)` pentru [Angajat](src/com/pao/laboratory02/exercise3/model/Angajat.java)
-- [Manager.java](src/com/pao/laboratory02/exercise3/model/Manager.java) — `super(name, salariuBaza)` pentru [Angajat](src/com/pao/laboratory02/exercise3/model/Angajat.java)
-- [Dog.java](src/com/pao/laboratory02/exercise4/model/Dog.java), [Cat.java](src/com/pao/laboratory02/exercise4/model/Cat.java), [Parrot.java](src/com/pao/laboratory02/exercise4/model/Parrot.java) — `super(name, age)` pentru [Animal](src/com/pao/laboratory02/exercise4/model/Animal.java)
+- [MySqlConnection.java](src/com/pao/laboratory03/abstractclasses/MySqlConnection.java) — `super(url)` pentru [DBConnection](src/com/pao/laboratory03/abstractclasses/DBConnection.java)
+- [Programator.java](src/com/pao/laboratory03/exercise3/model/Programator.java) — `super(name, salariuBaza)` pentru [Angajat](src/com/pao/laboratory03/exercise3/model/Angajat.java)
+- [Manager.java](src/com/pao/laboratory03/exercise3/model/Manager.java) — `super(name, salariuBaza)` pentru [Angajat](src/com/pao/laboratory03/exercise3/model/Angajat.java)
+- [Dog.java](src/com/pao/laboratory03/exercise4/model/Dog.java), [Cat.java](src/com/pao/laboratory03/exercise4/model/Cat.java), [Parrot.java](src/com/pao/laboratory03/exercise4/model/Parrot.java) — `super(name, age)` pentru [Animal](src/com/pao/laboratory03/exercise4/model/Animal.java)
 
 **b) Apelarea unei metode din părinte** — când vrei să extinzi (nu să înlocuiești) comportamentul:
 ```java
@@ -225,10 +225,10 @@ String parentName = super.name;  // dacă subclasa are și ea un câmp 'name'
 | **Când folosești** | Relație **IS-A** cu cod comun | Contract / capabilitate (**CAN-DO**) |
 
 **Exemplu din laborator:**
-- Clasă abstractă: [Angajat](src/com/pao/laboratory02/exercise3/model/Angajat.java) — cod comun + metodă abstractă `salariuTotal()`
-- Interfață: [Describable](src/com/pao/laboratory02/exercise4/model/Describable.java) — contract simplu `String describe()`
+- Clasă abstractă: [Angajat](src/com/pao/laboratory03/exercise3/model/Angajat.java) — cod comun + metodă abstractă `salariuTotal()`
+- Interfață: [Describable](src/com/pao/laboratory03/exercise4/model/Describable.java) — contract simplu `String describe()`
 
-**Caz special:** [Animal](src/com/pao/laboratory02/exercise4/model/Animal.java) este clasă abstractă care **implementează** interfața `Describable` → combină ambele concepte.
+**Caz special:** [Animal](src/com/pao/laboratory03/exercise4/model/Animal.java) este clasă abstractă care **implementează** interfața `Describable` → combină ambele concepte.
 
 </details>
 
@@ -249,7 +249,7 @@ public double area() {  // suprascrie Shape.area()
 }
 ```
 
-Găsești `@Override` în toate exercițiile: [Circle.java](src/com/pao/laboratory02/exercise1/Circle.java), [Rectangle.java](src/com/pao/laboratory02/exercise1/Rectangle.java), [Book.java](src/com/pao/laboratory02/equalshashcode/Book.java), [Dog.java](src/com/pao/laboratory02/exercise4/model/Dog.java), etc.
+Găsești `@Override` în toate exercițiile: [Circle.java](src/com/pao/laboratory03/exercise1/Circle.java), [Rectangle.java](src/com/pao/laboratory03/exercise1/Rectangle.java), [Book.java](src/com/pao/laboratory03/equalshashcode/Book.java), [Dog.java](src/com/pao/laboratory03/exercise4/model/Dog.java), etc.
 
 **Regulă:** Folosește **întotdeauna** `@Override` când suprascrii `toString()`, `equals()`, `hashCode()`, sau orice metodă din părinte/interfață.
 
@@ -264,7 +264,7 @@ Găsești `@Override` în toate exercițiile: [Circle.java](src/com/pao/laborato
 - `HashSet` / `HashMap` nu vor funcționa corect — duplicate "invizibile", căutări eșuate
 - Obiecte considerate egale de `equals()` ajung în bucket-uri diferite
 
-**Exemplu din [Book.java](src/com/pao/laboratory02/equalshashcode/Book.java):**
+**Exemplu din [Book.java](src/com/pao/laboratory03/equalshashcode/Book.java):**
 ```java
 @Override
 public boolean equals(Object o) {
@@ -282,7 +282,7 @@ public int hashCode() {
 
 **Regulă de aur:** Folosește **aceleași câmpuri** în ambele metode. IntelliJ poate genera automat (`Alt+Insert` → `equals() and hashCode()`).
 
-Vezi demo în [equalshashcode/Main.java](src/com/pao/laboratory02/equalshashcode/Main.java) — ce se întâmplă cu `HashSet` când override-ul lipsește.
+Vezi demo în [equalshashcode/Main.java](src/com/pao/laboratory03/equalshashcode/Main.java) — ce se întâmplă cu `HashSet` când override-ul lipsește.
 
 </details>
 
@@ -294,7 +294,7 @@ Vezi demo în [equalshashcode/Main.java](src/com/pao/laboratory02/equalshashcode
 | `==` | **Referințe în memorie** | `book1 == book2` → `true` doar dacă sunt **exact același obiect** |
 | `.equals()` | **Conținut logic** | `book1.equals(book2)` → `true` dacă au **aceleași valori** (după criteriul din `equals()`) |
 
-**Demo din [equalshashcode/Main.java](src/com/pao/laboratory02/equalshashcode/Main.java):**
+**Demo din [equalshashcode/Main.java](src/com/pao/laboratory03/equalshashcode/Main.java):**
 ```java
 Book book1 = new Book("Java", 500);
 Book book2 = new Book("Java", 300);
@@ -317,7 +317,7 @@ book1.equals(book2)  // true (același name → vezi Book.equals)
 
 O clasă **imutabilă** = obiectele create **nu se mai pot modifica** după instanțiere.
 
-**Reguli pentru a crea o clasă imutabilă** (vezi [ImmutableDog.java](src/com/pao/laboratory02/immutable/ImmutableDog.java)):
+**Reguli pentru a crea o clasă imutabilă** (vezi [ImmutableDog.java](src/com/pao/laboratory03/immutable/ImmutableDog.java)):
 1. Declară clasa `final` — previne extinderea (subclasele ar putea adăuga mutabilitate)
 2. Toate câmpurile `private final`
 3. **Fără setteri** — doar getteri
@@ -357,7 +357,7 @@ public final class ImmutableDog {
 | **HashSet** | • Ordine imprevizibilă<br>• **Fără duplicate**<br>• Necesită `equals`/`hashCode`<br>• Performanță: O(1) add/contains | Verificare rapidă apartenență, eliminare duplicate |
 | **TreeSet** | • **Sortat automat** (alfabetic, numeric)<br>• Fără duplicate<br>• Necesită `Comparable` sau `Comparator`<br>• Performanță: O(log n) | Când ai nevoie de colecție sortată automat |
 
-**Demo:** Vezi [collections/Main.java](src/com/pao/laboratory02/collections/Main.java) pentru exemple practice.
+**Demo:** Vezi [collections/Main.java](src/com/pao/laboratory03/collections/Main.java) pentru exemple practice.
 
 **Alegere rapidă:**
 - Trebuie să păstrezi **ordine**? → `ArrayList`
@@ -371,7 +371,7 @@ public final class ImmutableDog {
 
 **Polimorfism** = o variabilă de tip **părinte** poate stoca un obiect de tip **copil**, iar la rulare se apelează implementarea **reală** (a copilului), nu cea din părinte.
 
-**Exemplu din [abstractclasses/Main.java](src/com/pao/laboratory02/abstractclasses/Main.java):**
+**Exemplu din [abstractclasses/Main.java](src/com/pao/laboratory03/abstractclasses/Main.java):**
 ```java
 DBConnection conn1 = new MySqlConnection("jdbc:mysql://...");  // upcasting
 DBConnection conn2 = new OracleConnection("jdbc:oracle://...");
@@ -391,7 +391,7 @@ for (DBConnection conn : connections) {
 - ✅ **Extensibilitate** — adaugi noi subclase fără a modifica codul existent
 - ✅ **Design patterns** — Strategy, Factory, Template Method se bazează pe polimorfism
 
-Vezi și [exercise1/Main.java](src/com/pao/laboratory02/exercise1/Main.java) — calculează suma ariilor pentru orice `Shape[]` fără să știe tipul exact (Circle/Rectangle).
+Vezi și [exercise1/Main.java](src/com/pao/laboratory03/exercise1/Main.java) — calculează suma ariilor pentru orice `Shape[]` fără să știe tipul exact (Circle/Rectangle).
 
 </details>
 
@@ -424,7 +424,7 @@ public class Dog {
 ```
 
 **Exemplu `super(...)` chaining:**
-Vezi [Circle.java](src/com/pao/laboratory02/exercise1/Circle.java), [Programator.java](src/com/pao/laboratory02/exercise3/model/Programator.java) — toate apelează `super(...)` pentru a inițializa câmpurile din părinte.
+Vezi [Circle.java](src/com/pao/laboratory03/exercise1/Circle.java), [Programator.java](src/com/pao/laboratory03/exercise3/model/Programator.java) — toate apelează `super(...)` pentru a inițializa câmpurile din părinte.
 
 </details>
 
@@ -446,7 +446,7 @@ set.contains(book);  // poate returna false (bucket greșit)
 ```
 
 **Soluții:**
-1. **Folosește clase imutabile** ca keys — vezi [ImmutableDog.java](src/com/pao/laboratory02/immutable/ImmutableDog.java)
+1. **Folosește clase imutabile** ca keys — vezi [ImmutableDog.java](src/com/pao/laboratory03/immutable/ImmutableDog.java)
 2. **Nu modifica** obiectele după inserare în `HashSet`/`HashMap`
 3. Dacă trebuie modificat → **remove()** → modifică → **add()** înapoi
 
@@ -474,7 +474,7 @@ for (int i = 0; i < 1000; i++) {
 String result = sb.toString();
 ```
 
-Vezi benchmark în [strings/Main.java](src/com/pao/laboratory02/strings/Main.java) — diferența poate fi de **100x** viteza pentru concatenări masive!
+Vezi benchmark în [strings/Main.java](src/com/pao/laboratory03/strings/Main.java) — diferența poate fi de **100x** viteza pentru concatenări masive!
 
 **Regulă:** Concatenări în **buclă** sau **multe operații** → `StringBuilder`. Concatenare simplă (2-3 stringuri) → `+` este OK.
 
@@ -490,7 +490,7 @@ Vezi benchmark în [strings/Main.java](src/com/pao/laboratory02/strings/Main.jav
 - ✅ Când afișezi obiecte cu `System.out.println(obj)`
 - ✅ Când vrei logging comprehensibil
 
-**Exemplu din [Book.java](src/com/pao/laboratory02/equalshashcode/Book.java):**
+**Exemplu din [Book.java](src/com/pao/laboratory03/equalshashcode/Book.java):**
 ```java
 @Override
 public String toString() {
@@ -503,7 +503,7 @@ public String toString() {
 return getClass().getSimpleName() + "{field1=" + field1 + ", field2=" + field2 + "}";
 ```
 
-Vezi toate clasele model din laborator: [Shape.java](src/com/pao/laboratory02/exercise1/Shape.java), [Angajat.java](src/com/pao/laboratory02/exercise3/model/Angajat.java), [Animal.java](src/com/pao/laboratory02/exercise4/model/Animal.java) — toate au `toString()` suprascris.
+Vezi toate clasele model din laborator: [Shape.java](src/com/pao/laboratory03/exercise1/Shape.java), [Angajat.java](src/com/pao/laboratory03/exercise3/model/Angajat.java), [Animal.java](src/com/pao/laboratory03/exercise4/model/Animal.java) — toate au `toString()` suprascris.
 
 </details>
 
@@ -534,14 +534,14 @@ if (shape instanceof Circle) {
 }
 ```
 
-**Exemplu din laborator:** [abstractclasses/Main.java](src/com/pao/laboratory02/abstractclasses/Main.java) — array `DBConnection[]` conține obiecte `MySqlConnection` și `OracleConnection` (upcasting).
+**Exemplu din laborator:** [abstractclasses/Main.java](src/com/pao/laboratory03/abstractclasses/Main.java) — array `DBConnection[]` conține obiecte `MySqlConnection` și `OracleConnection` (upcasting).
 
 </details>
 
 <details>
 <summary><b>14. Cum parcurg o colecție? Care este diferența între metodele de iterare?</b></summary>
 
-**4 metode de parcurgere** (vezi [collections/Main.java](src/com/pao/laboratory02/collections/Main.java)):
+**4 metode de parcurgere** (vezi [collections/Main.java](src/com/pao/laboratory03/collections/Main.java)):
 
 **a) For clasic** — doar pentru liste cu index (`ArrayList`, array-uri):
 ```java
@@ -604,7 +604,7 @@ public abstract class Vehicle {  // abstract, dar fără metode abstracte
 - Design pattern **Template Method** — structură fixă în părinte, detalii în copii
 - Când clasa are sens doar ca **bază conceptuală**, nu standalone
 
-În laborator, [DBConnection](src/com/pao/laboratory02/abstractclasses/DBConnection.java), [Angajat](src/com/pao/laboratory02/exercise3/model/Angajat.java), [Animal](src/com/pao/laboratory02/exercise4/model/Animal.java) au **ambele** metode abstracte și concrete.
+În laborator, [DBConnection](src/com/pao/laboratory03/abstractclasses/DBConnection.java), [Angajat](src/com/pao/laboratory03/exercise3/model/Angajat.java), [Animal](src/com/pao/laboratory03/exercise4/model/Animal.java) au **ambele** metode abstracte și concrete.
 
 </details>
 
@@ -640,7 +640,7 @@ ZooService service2 = ZooService.getInstance();  // returnează aceeași instan�
 - Servicii globale (logging, configurare, conexiuni DB)
 - Resurse partajate (cache, pool-uri)
 
-**În laborator:** Implementezi Singleton în [ZooService.java](src/com/pao/laboratory02/exercise4/service/ZooService.java) — o singură instanță gestionează toți animalele din Zoo.
+**În laborator:** Implementezi Singleton în [ZooService.java](src/com/pao/laboratory03/exercise4/service/ZooService.java) — o singură instanță gestionează toți animalele din Zoo.
 
 **Alternativă modernă:** În aplicații mari, folosește **Dependency Injection** (Spring) în loc de Singleton manual.
 

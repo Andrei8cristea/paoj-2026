@@ -4,101 +4,26 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
+    private static final String OUTPUT_FILE = "output/lab09_ex1.ser";
 
-    private static final String FILE_PATH = "output/lab09_ex1.ser";
+    public static void main(String[] args) throws Exception {
+        // TODO: Implementează conform Readme.md
+        //
+        // 1. Citește N din stdin, apoi cele N tranzacții (id suma data contSursa contDestinatie tip)
+        // 2. Setează câmpul note = "procesat" pe fiecare tranzacție înainte de serializare
+        // 3. Serializează lista de tranzacții în OUTPUT_FILE cu ObjectOutputStream (try-with-resources)
+        // 4. Deserializează lista din OUTPUT_FILE cu ObjectInputStream (try-with-resources)
+        // 5. Procesează comenzile din stdin până la EOF:
+        //    - LIST          → afișează toate tranzacțiile, câte una pe linie
+        //    - FILTER yyyy-MM → afișează tranzacțiile cu data care începe cu yyyy-MM
+        //                       sau "Niciun rezultat." dacă nu există
+        //    - NOTE id        → afișează "NOTE[id]: <valoarea câmpului note>"
+        //                       sau "NOTE[id]: not found" dacă id-ul nu există
+        //
+        // Format linie tranzacție:
+        //   [id] data tip: suma RON | contSursa -> contDestinatie
+        //   Ex: [1] 2024-01-15 CREDIT: 1500.00 RON | RO01SRC1 -> RO01DST1
 
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        int N = Integer.parseInt(sc.nextLine());
-        List<Tranzactie> tranzactii = new ArrayList<>();
-
-        // Citire tranzacții
-        for (int i = 0; i < N; i++) {
-            int id = sc.nextInt();
-            double suma = sc.nextDouble();
-            String data = sc.next();
-            String contSursa = sc.next();
-            String contDestinatie = sc.next();
-            String tipStr = sc.next();
-
-            TipTranzactie tip = TipTranzactie.valueOf(tipStr);
-
-            Tranzactie t = new Tranzactie(id, suma, data, contSursa, contDestinatie, tip);
-            t.setNote("procesat"); // înainte de serializare
-            tranzactii.add(t);
-        }
-
-        // Creează folderul output dacă nu există
-        File dir = new File("output");
-        if (!dir.exists()) {
-            dir.mkdirs();
-        }
-
-// Serializare
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {
-            oos.writeObject(tranzactii);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-        // Deserializare
-        List<Tranzactie> lista = null;
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_PATH))) {
-            lista = (List<Tranzactie>) ois.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        // Procesare comenzi
-        sc.nextLine(); // consumă newline
-
-        while (sc.hasNextLine()) {
-            String line = sc.nextLine().trim();
-            if (line.isEmpty()) continue;
-
-            String[] parts = line.split(" ");
-
-            switch (parts[0]) {
-
-                case "LIST":
-                    for (Tranzactie t : lista) {
-                        System.out.println(t);
-                    }
-                    break;
-
-                case "FILTER":
-                    String prefix = parts[1]; // yyyy-MM
-                    boolean found = false;
-                    for (Tranzactie t : lista) {
-                        if (t.getData().startsWith(prefix)) {
-                            System.out.println(t);
-                            found = true;
-                        }
-                    }
-                    if (!found) {
-                        System.out.println("Niciun rezultat.");
-                    }
-                    break;
-
-                case "NOTE":
-                    int id = Integer.parseInt(parts[1]);
-                    Tranzactie foundT = null;
-                    for (Tranzactie t : lista) {
-                        if (t.getId() == id) {
-                            foundT = t;
-                            break;
-                        }
-                    }
-                    if (foundT == null) {
-                        System.out.println("NOTE[" + id + "]: not found");
-                    } else {
-                        System.out.println("NOTE[" + id + "]: " + foundT.getNote());
-                    }
-                    break;
-            }
-        }
+        System.out.println("TODO: implementează exercițiul 1");
     }
 }

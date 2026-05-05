@@ -2,7 +2,7 @@ package com.pao.laboratory06.exercise1;
 
 import java.util.Scanner;
 
-public class Angajat implements Comparable<Angajat>{
+public class Angajat {
     private String nume;
     private double salariu;
 
@@ -15,11 +15,6 @@ public class Angajat implements Comparable<Angajat>{
         String nume = s.next();
         double salariu = s.nextDouble();
         return new Angajat(nume, salariu);
-    }
-
-    @Override
-    public  int compareTo(Angajat other){
-        return Double.compare(this.salariu, other.salariu);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.pao.laboratory02.exercise3.model;
+package com.pao.laboratory03.exercise3.model;
 
 /** Clasă abstractă de bază pentru angajați. DATĂ — nu modifica. */
 public abstract class Angajat {
@@ -11,7 +11,6 @@ public abstract class Angajat {
     }
 
     public String getName() { return name; }
-
     public double getSalariuBaza() { return salariuBaza; }
 
     /** Formula diferă per subclasă. */

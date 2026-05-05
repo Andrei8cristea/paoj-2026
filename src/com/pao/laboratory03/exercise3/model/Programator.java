@@ -1,4 +1,4 @@
-package com.pao.laboratory02.exercise3.model;
+package com.pao.laboratory03.exercise3.model;
 
 /**
  * TODO: Implementează Programator extends Angajat.
@@ -8,15 +8,15 @@ package com.pao.laboratory02.exercise3.model;
  */
 public class Programator extends Angajat {
 
-    private String limbajPreferat;
+    // TODO: private String limbajPreferat
 
     public Programator(String name, double salariuBaza, String limbajPreferat) {
         super(name, salariuBaza);
-        this.limbajPreferat = limbajPreferat;
+        // TODO: this.limbajPreferat = limbajPreferat
     }
 
     @Override
     public double salariuTotal() {
-        return getSalariuBaza() * 1.5;
+        return 0; // TODO: getSalariuBaza() * 1.5
     }
 }

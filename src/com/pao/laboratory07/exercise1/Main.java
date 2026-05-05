@@ -1,94 +1,49 @@
 package com.pao.laboratory07.exercise1;
 
-import java.util.*;
+//import com.pao.laboratory07.exercise1.exceptions.CannotCancelFinalOrderException;
+//import com.pao.laboratory07.exercise1.exceptions.CannotRevertInitialOrderStateException;
+//import com.pao.laboratory07.exercise1.exceptions.OrderIsAlreadyFinalException;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-
-        StareComanda stareCurenta = StareComanda.valueOf(in.nextLine().trim());
-        System.out.println(stareCurenta);
-
-        Deque<StareComanda> istoric = new ArrayDeque<>();
-
-        boolean inStareFinala = (stareCurenta == StareComanda.LIVRATA ||
-                stareCurenta == StareComanda.ANULATA);
-
-        boolean aAfisatFinal = false;
-
-        while (true) {
-            String cmd = in.nextLine().trim();
-
-            // QUIT
-            if (cmd.equals("QUIT")) {
-                if (inStareFinala && !aAfisatFinal) {
-                    System.out.println("Comanda este in stare finala.");
-                }
-                break;
-            }
-
-            // Dacă suntem în stare finală și comanda NU este undo
-            if (inStareFinala && !cmd.equals("undo")) {
-                System.out.println("Comanda este in stare finala.");
-                aAfisatFinal = true;   // IMPORTANT: ca să nu mai afișăm la QUIT
-                continue;
-            }
-
-            switch (cmd) {
-
-                case "next" -> {
-                    istoric.push(stareCurenta);
-
-                    switch (stareCurenta) {
-                        case PLASATA -> stareCurenta = StareComanda.PROCESATA;
-                        case PROCESATA -> stareCurenta = StareComanda.EXPEDIATA;
-                        case EXPEDIATA -> stareCurenta = StareComanda.LIVRATA;
-                        default -> {}
-                    }
-
-                    System.out.println(stareCurenta);
-
-                    if (stareCurenta == StareComanda.LIVRATA) {
-                        inStareFinala = true;
-                        aAfisatFinal = false;
-                    }
-                }
-
-                case "cancel" -> {
-                    istoric.push(stareCurenta);
-
-                    if (stareCurenta != StareComanda.LIVRATA &&
-                            stareCurenta != StareComanda.ANULATA) {
-
-                        stareCurenta = StareComanda.ANULATA;
-                        System.out.println(stareCurenta);
-
-                        inStareFinala = true;
-                        aAfisatFinal = false;
-
-                    } else {
-                        System.out.println("Comanda este in stare finala.");
-                        aAfisatFinal = true;
-                    }
-                }
-
-                case "undo" -> {
-                    if (!istoric.isEmpty()) {
-                        stareCurenta = istoric.pop();
-                    }
-
-                    System.out.println(stareCurenta);
-
-                    inStareFinala = (stareCurenta == StareComanda.LIVRATA ||
-                            stareCurenta == StareComanda.ANULATA);
-
-                    aAfisatFinal = false;
-                }
-
-                default -> {
-                    // comenzi invalide ignorate
-                }
-            }
-        }
+//        Scanner scanner = new Scanner(System.in);
+//        // Part A
+//        // load initial state
+//        OrderState initialState = OrderState.valueOf(scanner.next());
+//        Order order = new Order(initialState);
+//        System.out.println("Initial order state: " + initialState);
+//
+//        while (true) {
+//            OrderCommand orderCommand = OrderCommand.valueOf(scanner.next());
+//            switch (orderCommand) {
+//                case next -> {
+//                    try {
+//                        order.nextState();
+//                    } catch (OrderIsAlreadyFinalException e) {
+//                        System.out.println("Order is already in a final state.");
+//                    }
+//                }
+//                case cancel -> {
+//                    try {
+//                        order.cancel();
+//                    } catch (CannotCancelFinalOrderException e) {
+//                        System.out.println("Cannot cancel a final state order.");
+//                    }
+//                }
+//                case undo -> {
+//                    try {
+//                        order.undoState();
+//                    } catch (CannotRevertInitialOrderStateException e) {
+//                        System.out.println("Cannot undo the initial order state.");
+//                    }
+//                }
+//                case QUIT -> {
+//                    System.out.println("User quit the program.");
+//                    return;
+//                }
+//            }
+//        }
     }
 }
