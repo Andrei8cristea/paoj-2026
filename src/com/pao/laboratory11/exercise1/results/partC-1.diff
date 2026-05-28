@@ -1,0 +1,18 @@
+--- expected
++++ actual
+@@ -1,8 +1,8 @@
+-[3] FLAG score=70
+-[5] FLAG score=60
+-[1] ALLOW score=55
+-[3] FLAG score=70
+-[5] FLAG score=60
+-[1] ALLOW score=55
+-[2] ALLOW score=55
++[1] ALLOW score=85
++[2] ALLOW score=85
++[3] ALLOW score=75
++[1] ALLOW score=85
++[2] ALLOW score=85
++[3] ALLOW score=75
+ [4] ALLOW score=55
++[5] ALLOW score=45

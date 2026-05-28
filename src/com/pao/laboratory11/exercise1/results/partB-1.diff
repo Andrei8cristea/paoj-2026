@@ -1,0 +1,6 @@
+--- expected
++++ actual
+@@ -1,2 +1,1 @@
+-[1] FLAG score=110
+-[3] FLAG score=100
++[1] FLAG score=120
